@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import AOS from 'aos';
-import { GITHUB_URL, PROJECTS, PROJECT_FILTERS } from '../../data/projects';
+import { PROJECTS, PROJECT_FILTERS } from '../../data/projects';
 import SectionHead from '../ui/SectionHead';
 
 function ProjectCard({ project, index }) {
@@ -31,12 +31,7 @@ function ProjectCard({ project, index }) {
                 </a>
               </>
             ) : (
-              <>
-                <span className="proj-btn" aria-hidden="true"><i className="fa-solid fa-up-right-from-square" /></span>
-                <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="proj-btn" aria-label="Source code">
-                  <i className="fa-brands fa-github" />
-                </a>
-              </>
+              <span className="overlay-title">{project.title}</span>
             )}
           </div>
         </div>
@@ -46,18 +41,13 @@ function ProjectCard({ project, index }) {
           <div className="project-tags">
             {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
           </div>
-          <div className="project-links">
-            {project.demo ? (
+          {project.demo && (
+            <div className="project-links">
               <a href={project.demo} target="_blank" rel="noopener noreferrer" className="link-accent">
                 <i className="fa-solid fa-up-right-from-square" /> Live Demo
               </a>
-            ) : (
-              <span className="link-accent"><i className="fa-solid fa-up-right-from-square" /> Live Demo</span>
-            )}
-            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="link-muted">
-              <i className="fa-brands fa-github" /> Source Code
-            </a>
-          </div>
+            </div>
+          )}
         </div>
       </article>
     </div>

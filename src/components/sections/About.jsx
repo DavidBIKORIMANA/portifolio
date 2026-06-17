@@ -16,14 +16,17 @@ export default function About() {
         <div className="row g-5 align-items-center">
           <div className="col-lg-5" data-aos="fade-right">
             <div className="about-visual glass-card">
-              <img
-                src={SITE.aboutImage}
-                alt="David Bikorimana"
-                onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = 'https://placehold.co/520x560/112240/FFD333?text=About+David';
-                }}
-              />
+              <div className="about-image-frame">
+                <img
+                  src={SITE.aboutImage}
+                  alt="David Bikorimana"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = 'https://placehold.co/520x560/112240/FFD333?text=About+David';
+                  }}
+                />
+                <div className="image-overlay" aria-hidden="true" />
+              </div>
               <div className="about-experience">
                 <span className="num">7<span className="text-accent">+</span></span>
                 <span className="lbl">Years of Experience</span>

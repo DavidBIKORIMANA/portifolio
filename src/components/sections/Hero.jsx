@@ -58,26 +58,29 @@ export default function Hero({ onNavigate }) {
           <div className="col-lg-5" data-aos="fade-left" data-aos-delay="150">
             <div className="hero-image-wrap">
               <div className="hero-image-glass">
-                <img
-                  src={SITE.profileImage}
-                  alt="David Bikorimana — Database Administrator and Full Stack Developer"
-                  className="hero-image"
-                  width="420"
-                  height="480"
-                  onError={(e) => {
-                    e.currentTarget.onerror = null;
-                    e.currentTarget.src = 'https://placehold.co/420x480/112240/FFD333?text=David+Bikorimana';
-                  }}
-                />
+                <div className="hero-image-frame">
+                  <img
+                    src={SITE.profileImage}
+                    alt="David Bikorimana — Database Administrator and Full Stack Developer"
+                    className="hero-image"
+                    width="420"
+                    height="480"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = 'https://placehold.co/420x480/112240/FFD333?text=David+Bikorimana';
+                    }}
+                  />
+                  <div className="image-overlay" aria-hidden="true" />
+                </div>
               </div>
-              <div className="floating-card floating-card--top" data-aos="zoom-in" data-aos-delay="500">
+              <div className="floating-card floating-card--top">
                 <i className="fa-solid fa-database" />
                 <div>
                   <strong>12+</strong>
                   <small>Systems Built</small>
                 </div>
               </div>
-              <div className="floating-card floating-card--bottom" data-aos="zoom-in" data-aos-delay="700">
+              <div className="floating-card floating-card--bottom">
                 <i className="fa-solid fa-certificate" />
                 <div>
                   <strong>18+</strong>

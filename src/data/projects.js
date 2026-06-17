@@ -1,5 +1,3 @@
-import { SITE } from './siteData';
-
 const mshot = (url) =>
   `https://s.wp.com/mshots/v1/${encodeURIComponent(url)}?w=600&h=400`;
 
@@ -28,12 +26,12 @@ export const PROJECTS = [
   },
   {
     category: 'health',
-    title: 'BORN Health App',
-    description: 'Web-based fertility & menstrual tracking app with RESTful API backend and user-centered design.',
-    image: placeholder('BORN Health App'),
-    fallback: placeholder('BORN Health App'),
-    demo: null,
-    tags: ['Laravel', 'Flutter', 'REST API'],
+    title: 'FamCare',
+    description: 'Healthcare platform for patient care management with secure authentication and role-based access.',
+    image: mshot('http://94.72.112.148:93/auth/login'),
+    fallback: placeholder('FamCare'),
+    demo: 'http://94.72.112.148:93/auth/login',
+    tags: ['Laravel', 'MySQL', 'REST API'],
   },
   {
     category: 'finance',
@@ -64,11 +62,11 @@ export const PROJECTS = [
   },
   {
     category: 'hospitality',
-    title: 'BMIS',
+    title: 'BMIS — Jackal System',
     description: 'Multi-branch Bar, Kitchen & Guest House MIS with POS, invoicing, inventory and real-time reporting.',
-    image: placeholder('BMIS'),
-    fallback: placeholder('BMIS'),
-    demo: null,
+    image: mshot('https://www.jackal.rw/'),
+    fallback: placeholder('Jackal System'),
+    demo: 'https://www.jackal.rw/',
     tags: ['Laravel', 'MySQL', 'POS'],
   },
   {
@@ -126,5 +124,3 @@ export const PROJECTS = [
     tags: ['Laravel', 'MySQL', 'MIS'],
   },
 ];
-
-export const GITHUB_URL = SITE.github;
