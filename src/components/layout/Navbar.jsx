@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NAV_LINKS, SITE } from '../../data/siteData';
+import BrandLogo from '../ui/BrandLogo';
 
 export default function Navbar({ scrolled, activeSection, onNavigate }) {
   const [open, setOpen] = useState(false);
@@ -14,10 +15,7 @@ export default function Navbar({ scrolled, activeSection, onNavigate }) {
     <nav className={`navbar navbar-expand-lg fixed-top main-nav${scrolled ? ' scrolled' : ''}`} id="mainNav">
       <div className="container">
         <a className="navbar-brand" href="#home" onClick={(e) => handleNav(e, '#home')}>
-          <span className="brand-mark">DB</span>
-          <span className="brand-text">
-            David<span className="text-accent">.</span>
-          </span>
+          <BrandLogo />
         </a>
 
         <button

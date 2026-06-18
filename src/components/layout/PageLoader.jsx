@@ -11,7 +11,7 @@ export default function PageLoader() {
   return (
     <div className={`page-loader${hidden ? ' hidden' : ''}`}>
       <div className="loader-ring" />
-      <span className="loader-text">DB</span>
+      <span className="loader-mark">&lt;/&gt;</span>
     </div>
   );
 }

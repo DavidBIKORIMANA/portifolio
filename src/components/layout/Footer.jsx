@@ -1,5 +1,6 @@
 import { SITE } from '../../data/siteData';
 import SocialLinks from '../ui/SocialLinks';
+import BrandLogo from '../ui/BrandLogo';
 
 export default function Footer({ onNavigate }) {
   const year = new Date().getFullYear();
@@ -21,10 +22,9 @@ export default function Footer({ onNavigate }) {
       <div className="container">
         <div className="row g-4">
           <div className="col-lg-4 col-md-6">
-            <a className="footer-brand" href="#home" onClick={(e) => { e.preventDefault(); onNavigate('#home'); }}>
-              <span className="brand-mark">DB</span>
-              <span className="brand-text">{SITE.name}</span>
-            </a>
+          <a className="footer-brand" href="#home" onClick={(e) => { e.preventDefault(); onNavigate('#home'); }}>
+            <BrandLogo name="David" />
+          </a>
             <p className="footer-about">
               Database Administrator, Data Analyst, Full Stack Developer & IT Support Specialist building
               scalable, data-driven systems from Kigali, Rwanda.

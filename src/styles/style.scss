@@ -295,12 +295,15 @@ section {
     position: absolute;
   }
 
-  .loader-text {
-    font-family: $font-head;
+  .loader-mark {
+    font-family: ui-monospace, 'Cascadia Code', 'Consolas', monospace;
     font-weight: 700;
-    color: $primary;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+    font-size: 1.15rem;
+    letter-spacing: -1px;
+    @include gold-text-gradient;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -321,6 +324,45 @@ section {
 }
 
 // ==================== 8. NAVBAR ====================
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-mark {
+  @include flex-center;
+  @include gold-gradient;
+  color: $bg-900;
+  min-width: 44px;
+  height: 40px;
+  padding: 0 0.45rem;
+  border-radius: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(255, 211, 51, 0.22);
+
+  &__code {
+    font-family: ui-monospace, 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+}
+
+.brand-text {
+  font-family: $font-head;
+  font-weight: 700;
+  color: $white;
+  letter-spacing: -0.02em;
+}
+
+.brand-dot {
+  @include gold-text-gradient;
+  -webkit-text-fill-color: transparent;
+}
+
 .main-nav {
   padding: 1.1rem 0;
   transition: all $transition;
@@ -346,14 +388,8 @@ section {
   }
 
   .brand-mark {
-    @include flex-center;
-    @include gold-gradient;
-    color: $bg-900;
-    width: 40px;
+    min-width: 44px;
     height: 40px;
-    border-radius: 12px;
-    font-weight: 800;
-    font-size: 1rem;
   }
 
   .nav-link {
@@ -1323,24 +1359,22 @@ section {
 }
 
 .footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: $font-head;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: $white;
+  display: inline-flex;
   margin-bottom: 1rem;
+  text-decoration: none;
+
+  .brand-logo {
+    gap: 0.55rem;
+  }
 
   .brand-mark {
-    @include flex-center;
-    @include gold-gradient;
-    color: $bg-900;
-    width: 38px;
+    min-width: 38px;
     height: 38px;
     border-radius: 11px;
-    font-weight: 800;
-    font-size: 0.95rem;
+  }
+
+  .brand-text {
+    font-size: 1.2rem;
   }
 }
 
