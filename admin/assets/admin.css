@@ -83,7 +83,8 @@ tr:last-child td{ border-bottom:none; }
 .login-submit{ width:100%; padding:12px; background:var(--oxide); border:1px solid var(--oxide); color:var(--bone); font-size:14px; cursor:pointer; border-radius:4px; }
 .login-submit:hover{ background:var(--oxide-bright); }
 .emoji-list{ display:flex; gap:20px; flex-wrap:wrap; }
-.emoji-item{ text-align:center; border:1px solid var(--line); padding:18px 22px; border-radius:6px; }
-.emoji-item .e{ font-size:1.8rem; }
-.emoji-item .n{ margin-top:8px; font-weight:700; color:var(--brass); }
+.emoji-item{ text-align:center; border:1px solid var(--line); padding:18px 22px; border-radius:6px; min-width:96px; }
+.emoji-item .e{ font-size:1.4rem; color:var(--brass); }
+.emoji-item .label{ margin-top:8px; font-size:12px; color:var(--stone); text-transform:uppercase; letter-spacing:0.06em; }
+.emoji-item .n{ margin-top:6px; font-weight:700; color:var(--brass); }
 .pill{ font-size:11px; color:var(--stone); background:var(--panel-2); border:1px solid var(--line); padding:3px 9px; border-radius:10px; }

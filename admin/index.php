@@ -88,7 +88,7 @@ admin_header('index');
         <?php endforeach; ?>
       </tbody>
     </table>
-    <p style="margin-top:16px;"><a class="btn" href="messages.php">View all messages →</a></p>
+    <p style="margin-top:16px;"><a class="btn" href="messages.php">View all messages <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
   <?php endif; ?>
 </div>
 

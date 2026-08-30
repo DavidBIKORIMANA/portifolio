@@ -6,7 +6,7 @@
 <title>David Bikorimana — Full Stack Developer, Kigali Rwanda</title>
 
 <!-- SEO -->
-<meta name="description" content="Full stack developer and systems engineer in Kigali, Rwanda. 7+ years, 35 live platforms — including the CARE System EMR across 40+ health centers.">
+<meta name="description" content="Full stack developer in Kigali, Rwanda. 7+ years, about 35 live systems — including the CARE EMR used in 40+ health centers.">
 <meta name="keywords" content="David Bikorimana, full stack developer Rwanda, Kigali software engineer, Laravel developer Rwanda, React developer Rwanda, Genius Software Ltd, CARE System EMR, systems engineer Kigali, IT support specialist Rwanda">
 <meta name="author" content="David Bikorimana">
 <meta name="robots" content="index, follow">
@@ -15,8 +15,8 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://davidbikorimana.rw/">
-<meta property="og:title" content="David Bikorimana — Full Stack Developer & Systems Engineer">
-<meta property="og:description" content="7+ years, 35 live production platforms across health, finance, real estate, and hospitality — built and run from Kigali, Rwanda.">
+<meta property="og:title" content="David Bikorimana — Full Stack Developer, Kigali">
+<meta property="og:description" content="7+ years building and running software from Kigali — about 35 live systems across health, finance, real estate, and hospitality.">
 <meta property="og:image" content="https://davidbikorimana.rw/og-image.jpg">
 <meta property="og:image:width" content="600">
 <meta property="og:image:height" content="600">
@@ -26,8 +26,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="David Bikorimana — Full Stack Developer & Systems Engineer">
-<meta name="twitter:description" content="7+ years, 35 live production platforms across health, finance, real estate, and hospitality — built and run from Kigali, Rwanda.">
+<meta name="twitter:title" content="David Bikorimana — Full Stack Developer, Kigali">
+<meta name="twitter:description" content="7+ years building and running software from Kigali — about 35 live systems across health, finance, real estate, and hospitality.">
 <meta name="twitter:image" content="https://davidbikorimana.rw/og-image.jpg">
 <meta name="twitter:image:alt" content="David Bikorimana — full stack developer and systems engineer, Kigali, Rwanda">
 
@@ -59,7 +59,7 @@
     "name": "University of Rwanda, College of Science & Technology"
   },
   "image": "https://davidbikorimana.rw/og-image.jpg",
-  "description": "Full stack developer, database and systems engineer, and IT support specialist in Kigali, Rwanda. Builds and maintains production platforms across health, finance, cooperative, real estate, and hospitality sectors.",
+  "description": "Full stack developer, database engineer, and IT support specialist in Kigali, Rwanda. Builds and maintains live systems across health, finance, cooperatives, real estate, and hospitality.",
   "nationality": { "@type": "Country", "name": "Rwanda" },
   "knowsLanguage": ["Kinyarwanda", "English", "French"],
   "knowsAbout": [
@@ -106,7 +106,7 @@
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "url": "https://davidbikorimana.rw/",
-  "name": "David Bikorimana — Full Stack Developer & Systems Engineer",
+  "name": "David Bikorimana — Full Stack Developer, Kigali",
   "inLanguage": "en",
   "mainEntity": { "@type": "Person", "name": "David Bikorimana" }
 }
@@ -115,6 +115,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <style>
   :root{
     --ink:#15130f;
@@ -556,13 +557,33 @@
     display:flex; align-items:center; gap:8px;
     background:none; border:1px solid var(--line); color:var(--bone);
     padding:9px 14px; cursor:pointer; font-family:'IBM Plex Mono', monospace; font-size:13px;
-    transition:border-color .15s ease, background .15s ease;
+    transition:border-color .15s ease, background .15s ease, color .15s ease, box-shadow .15s ease;
   }
-  .reaction-btn .e{ font-size:16px; line-height:1; }
-  .reaction-btn:hover{ border-color:var(--stone); }
-  .reaction-btn.is-active{ border-color:var(--oxide-bright); background:rgba(194,68,37,0.14); color:var(--bone); }
-  .reaction-btn .n{ color:var(--stone); min-width:1ch; }
-  .reaction-btn.is-active .n{ color:var(--oxide-bright); }
+  .reaction-btn .ri{ font-size:14px; width:1em; text-align:center; flex-shrink:0; line-height:1; }
+  .reaction-btn .n{ min-width:1ch; color:var(--stone); }
+
+  .reaction-btn[data-reaction="like"] .ri{ color:#4A9EFF; }
+  .reaction-btn[data-reaction="love"] .ri{ color:#FF5C7A; }
+  .reaction-btn[data-reaction="boost"] .ri{ color:#8B7CFF; }
+  .reaction-btn[data-reaction="fire"] .ri{ color:#FF8A3D; }
+  .reaction-btn[data-reaction="idea"] .ri{ color:#F0C94A; }
+
+  .reaction-btn[data-reaction="like"]:hover{ border-color:#4A9EFF; background:rgba(74,158,255,0.1); }
+  .reaction-btn[data-reaction="love"]:hover{ border-color:#FF5C7A; background:rgba(255,92,122,0.1); }
+  .reaction-btn[data-reaction="boost"]:hover{ border-color:#8B7CFF; background:rgba(139,124,255,0.1); }
+  .reaction-btn[data-reaction="fire"]:hover{ border-color:#FF8A3D; background:rgba(255,138,61,0.1); }
+  .reaction-btn[data-reaction="idea"]:hover{ border-color:#F0C94A; background:rgba(240,201,74,0.1); }
+
+  .reaction-btn[data-reaction="like"].is-active{ border-color:#4A9EFF; background:rgba(74,158,255,0.16); }
+  .reaction-btn[data-reaction="like"].is-active .n{ color:#4A9EFF; }
+  .reaction-btn[data-reaction="love"].is-active{ border-color:#FF5C7A; background:rgba(255,92,122,0.16); }
+  .reaction-btn[data-reaction="love"].is-active .n{ color:#FF5C7A; }
+  .reaction-btn[data-reaction="boost"].is-active{ border-color:#8B7CFF; background:rgba(139,124,255,0.16); }
+  .reaction-btn[data-reaction="boost"].is-active .n{ color:#8B7CFF; }
+  .reaction-btn[data-reaction="fire"].is-active{ border-color:#FF8A3D; background:rgba(255,138,61,0.16); }
+  .reaction-btn[data-reaction="fire"].is-active .n{ color:#FF8A3D; }
+  .reaction-btn[data-reaction="idea"].is-active{ border-color:#F0C94A; background:rgba(240,201,74,0.16); }
+  .reaction-btn[data-reaction="idea"].is-active .n{ color:#F0C94A; }
 
   /* ---------- CONTACT FORM ---------- */
   .contact-form{ margin-top:56px; padding-top:48px; border-top:1px solid var(--line); max-width:640px; }
@@ -602,7 +623,7 @@
     <a href="#top" class="nav-mark">DAVID<span>.</span>DEV</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#flagship">Flagship</a></li>
+      <li><a href="#flagship">CARE</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#stack">Stack</a></li>
@@ -631,10 +652,10 @@
         <div class="eyebrow">Genius Software Ltd — Kigali, Rwanda</div>
         <h1 id="typedName" aria-label="BIKORIMANA David"><span class="type-line" id="typeLine1" aria-hidden="true"></span><br><span class="type-line" id="typeLine2" aria-hidden="true"></span><span class="type-cursor" id="typeCursor" aria-hidden="true">&nbsp;</span></h1>
         <div class="role">Full Stack Developer · Database &amp; Systems Engineer · IT Support Specialist</div>
-        <p class="thesis">Over 7 years shipping software that institutions actually depend on — 35 live production platforms across health, finance, real estate, and hospitality, backed by the infrastructure, database, and IT support work that keeps them running.</p>
+        <p class="thesis">7+ years in software. About 35 systems still live — health, finance, real estate, hospitality. I also do the servers, databases, and IT support.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#flagship">View flagship platform</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          <a class="btn btn-primary" href="#flagship">See CARE</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
         </div>
       </div>
       <div class="hero-right">
@@ -650,10 +671,10 @@
         </div>
         <div class="status-panel">
         <div class="status-row"><span class="status-label">Experience</span><span class="status-value">7+ years</span></div>
-        <div class="status-row"><span class="status-label">Live platforms</span><span class="status-value">35 in production</span></div>
-        <div class="status-row"><span class="status-label">Core stack</span><span class="status-value">Laravel · React · TypeScript</span></div>
-        <div class="status-row"><span class="status-label">Also shipping in</span><span class="status-value">Flutter · Node.js · MySQL / PostgreSQL</span></div>
-        <div class="status-row"><span class="status-label">Beyond code</span><span class="status-value">Networking · Servers · CCTV/IT support</span></div>
+        <div class="status-row"><span class="status-label">Live systems</span><span class="status-value">About 35</span></div>
+        <div class="status-row"><span class="status-label">Main stack</span><span class="status-value">Laravel · React · TypeScript</span></div>
+        <div class="status-row"><span class="status-label">Also use</span><span class="status-value">Flutter · Node.js · MySQL / PostgreSQL</span></div>
+        <div class="status-row"><span class="status-label">Outside code</span><span class="status-value">Networking · Servers · CCTV/IT support</span></div>
         <div class="status-row"><span class="status-label">Base</span><span class="status-value">Kigali, Rwanda</span></div>
         </div>
       </div>
@@ -665,26 +686,26 @@
   <section id="about">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Positioning</div>
-        <h2>Senior-level work, measured by what it holds together.</h2>
+        <div class="eyebrow">About</div>
+        <h2>A bit about me.</h2>
       </div>
       <div class="about-body">
         <div>
-          <p>I run <strong>Genius Software Ltd</strong>, where I work as both the engineer writing the code and the lead responsible for what ships — full-stack builds across Laravel, React, TypeScript, and Flutter, plus the network administration, server management, and end-user IT support that keep those systems live day to day.</p>
-          <p>Most of my work sits where technical depth meets institutional trust: an EMR running across 40+ health centers with 99%+ uptime, financial and cooperative platforms handling real member funds, and bilingual client documentation in <strong>Kinyarwanda and English</strong> produced to the same standard as the code.</p>
+          <p>I run <strong>Genius Software Ltd</strong>. I write the code and I stay with it after it goes live. That means Laravel, React, TypeScript, and Flutter apps, and also networking, servers, and day-to-day IT support.</p>
+          <p>Most of it is day-to-day systems: an EMR in 40+ health centers (99%+ uptime), and finance/coop platforms that move real member money. Some of them talk to users in <strong>Kinyarwanda</strong>, <strong>English</strong>, or <strong>French</strong> — not only English.</p>
         </div>
         <ul class="capability-list">
           <li>
             <div class="cap-tag">01</div>
-            <div><div class="cap-title">Full-stack &amp; enterprise architecture</div><div class="cap-desc">Laravel, React, TypeScript, and Flutter systems built for institutional users, not demos.</div></div>
+            <div><div class="cap-title">Full-stack development</div><div class="cap-desc">Laravel, React, TypeScript, and Flutter — hospitals, coops, hotels, shops.</div></div>
           </li>
           <li>
             <div class="cap-tag">02</div>
-            <div><div class="cap-title">Infrastructure &amp; IT operations</div><div class="cap-desc">LAN/WAN administration, server management, backups, and security — the systems layer beneath the software.</div></div>
+            <div><div class="cap-title">Infrastructure &amp; IT support</div><div class="cap-desc">LAN/WAN, servers, backups, security. The boring parts that keep software online.</div></div>
           </li>
           <li>
             <div class="cap-tag">03</div>
-            <div><div class="cap-title">Bilingual technical documentation</div><div class="cap-desc">Contracts, reports, and agreements produced correctly in Kinyarwanda and English, including DOCX XML automation.</div></div>
+            <div><div class="cap-title">Multilingual systems</div><div class="cap-desc">Built in Kinyarwanda, English, or French when that is what the users need.</div></div>
           </li>
         </ul>
       </div>
@@ -696,34 +717,34 @@
   <section id="flagship">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Flagship platform</div>
-        <h2>The project that defines the level.</h2>
+        <div class="eyebrow">Project</div>
+        <h2>CARE — the biggest one.</h2>
       </div>
       <div class="flagship">
         <div class="flagship-stats">
-          <div class="fstat"><div class="fstat-n">40+</div><div class="fstat-k">Health centers live</div></div>
-          <div class="fstat"><div class="fstat-n">99%+</div><div class="fstat-k">Uptime in production</div></div>
-          <div class="fstat"><div class="fstat-n">End to end</div><div class="fstat-k">Build, deploy, maintain</div></div>
+          <div class="fstat"><div class="fstat-n">40+</div><div class="fstat-k">Health centers</div></div>
+          <div class="fstat"><div class="fstat-n">99%+</div><div class="fstat-k">Uptime</div></div>
+          <div class="fstat"><div class="fstat-n">My role</div><div class="fstat-k">Build, deploy, maintain</div></div>
         </div>
         <div class="flagship-grid">
           <div>
             <div class="eyebrow">CARE System — Electronic Medical Records</div>
-            <h3>An EMR running live across 40+ health centers, at 99%+ uptime.</h3>
-            <p class="lede">CARE is a native PHP electronic medical record system — built with PHP, JavaScript, jQuery, HTML, CSS, and MySQL — to store and retrieve patient data reliably across dozens of health centers at once. Uptime at that scale isn't a demo metric — it's proactive monitoring, rapid incident response, and infrastructure decisions made to hold under real clinical load.</p>
-            <p class="lede">I own it end to end: full-stack development, API integrations, and the ongoing IT maintenance that keeps it live in production — including the official maintenance contracts and reports for centers such as SIMBI and Rusatira, drafted in Kinyarwanda and English through DOCX XML manipulation and Node.js generation.</p>
+            <h3>An EMR used in 40+ health centers, with 99%+ uptime.</h3>
+            <p class="lede">CARE is a native PHP EMR (PHP, JavaScript, jQuery, HTML, CSS, MySQL). Clinics use it to store and look up patient records. Keeping uptime near 99% is mostly watching the servers, fixing problems quickly, and not guessing on infrastructure.</p>
+            <p class="lede">I built it and I still look after it — app, APIs, servers, and support. That includes centers like SIMBI and Rusatira.</p>
             <div class="chip-row">
               <span class="chip">Native PHP</span>
               <span class="chip">jQuery</span>
               <span class="chip">MySQL</span>
               <span class="chip">JSON / REST APIs</span>
               <span class="chip">Uptime monitoring</span>
-              <span class="chip">Multi-site deployment</span>
+              <span class="chip">Multi-site</span>
             </div>
           </div>
           <div class="flagship-meta">
-            <div class="meta-item"><div class="meta-k">Domain</div><div class="meta-v">Health tech / EMR</div></div>
+            <div class="meta-item"><div class="meta-k">Domain</div><div class="meta-v">Health / EMR</div></div>
             <div class="meta-item"><div class="meta-k">Scale</div><div class="meta-v">40+ health centers across Huye, Nyanza, Nyamagabe, Ruhango, and Nyaruguru districts</div></div>
-            <div class="meta-item"><div class="meta-k">Role</div><div class="meta-v">Full-stack lead — development through ongoing IT maintenance</div></div>
+            <div class="meta-item"><div class="meta-k">Role</div><div class="meta-v">I build it and I maintain it</div></div>
             <div class="meta-item"><div class="meta-k">Live at</div><div class="meta-v"><a href="https://care.geniussoftware.rw" target="_blank" rel="noopener">care.geniussoftware.rw</a></div></div>
           </div>
         </div>
@@ -736,9 +757,9 @@
   <section id="work">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Selected work</div>
-        <h2>Platforms live and in the field.</h2>
-        <p>Senior work isn't depth on one build — it's holding many to standard at once. I run a dedicated project-management workbook (timelines, risk logs, milestones, budgets, dashboard) to keep every engagement on track, across sectors that don't forgive downtime.</p>
+        <div class="eyebrow">Selected projects</div>
+        <h2>Projects that are live.</h2>
+        <p>CARE is the biggest, but I keep several other systems live too. I track timelines, risks, and budgets in a workbook — health and finance jobs do not get to go down.</p>
       </div>
       <div class="filter-bar" role="group" aria-label="Filter work by sector">
         <button class="filter-chip is-active" type="button" data-filter="all">All</button>
@@ -753,72 +774,72 @@
         <div class="work-card" data-sector="fintech">
           <div class="wk-eyebrow">Fintech</div>
           <h4>FAIDA Mutual Fund MIS</h4>
-          <p>Secure financial platform with role-based access, transaction tracking, and member management. <a href="https://faidamutualfund.com" target="_blank" rel="noopener">faidamutualfund.com</a></p>
+          <p>Member accounts, loans, and transactions, with role-based access. <a href="https://faidamutualfund.com" target="_blank" rel="noopener">faidamutualfund.com</a></p>
         </div>
         <div class="work-card" data-sector="fintech">
           <div class="wk-eyebrow">Fintech</div>
           <h4>Ikimina Management System</h4>
-          <p>Digital savings and loan platform for community groups — members, contributions, loans, guarantors, accounting, meetings, and reporting. Laravel, React, TypeScript, Flutter, Docker. <a href="http://94.72.112.148:8095" target="_blank" rel="noopener">Live instance</a></p>
+          <p>Savings and loans for community groups — members, contributions, loans, guarantors, meetings, and reports. Built with Laravel, React, TypeScript, Flutter, and Docker. <a href="http://94.72.112.148:8095" target="_blank" rel="noopener">Live instance</a></p>
         </div>
         <div class="work-card" data-sector="public">
           <div class="wk-eyebrow">Utilities</div>
           <h4>WCMS</h4>
-          <p>Web and mobile water-consumer billing platform with mobile money integration and multi-branch network support.</p>
+          <p>Water billing for web and mobile, with mobile money and multi-branch support.</p>
         </div>
         <div class="work-card" data-sector="hospitality">
           <div class="wk-eyebrow">Hospitality</div>
           <h4>LUCERNA KABGAYI Hotel</h4>
-          <p>Website and booking MIS with real-time availability, payment integration, and an admin dashboard. Built and delivered; operation since handed over to another company. <a href="https://www.lucernakabgayihotel.rw" target="_blank" rel="noopener">lucernakabgayihotel.rw</a></p>
+          <p>Hotel website and booking system with availability, payments, and an admin dashboard. Built and handed over — another company runs it now. <a href="https://www.lucernakabgayihotel.rw" target="_blank" rel="noopener">lucernakabgayihotel.rw</a></p>
         </div>
         <div class="work-card" data-sector="public">
           <div class="wk-eyebrow">Cooperative</div>
           <h4>COOPEC IMPAMBA</h4>
-          <p>Public web platform (not an ERP) for a SACCO in Gikonko, Gisagara — loan products (salary, emergency, business, transport, agriculture, construction), savings and deposit terms, news, announcements, and management profiles, with a CMS behind it. <a href="https://www.coopecimpamba.rw" target="_blank" rel="noopener">coopecimpamba.rw</a></p>
+          <p>Public website for a SACCO in Gikonko, Gisagara — loan products, savings info, news, and staff profiles, with a CMS behind it. Not an ERP. <a href="https://www.coopecimpamba.rw" target="_blank" rel="noopener">coopecimpamba.rw</a></p>
         </div>
         <div class="work-card" data-sector="commerce">
           <div class="wk-eyebrow">Real estate</div>
           <h4>FEKHABA</h4>
-          <p>Real-estate advisory platform for East African markets — filtered search by location, type, and sale/rent, individual property pages with media, advisor profiles, client accounts, and an admin listing backend. <a href="https://fekhaba.com" target="_blank" rel="noopener">fekhaba.com</a></p>
+          <p>Property site for East Africa — search by location, type, and sale/rent, property pages, advisor profiles, and an admin backend. <a href="https://fekhaba.com" target="_blank" rel="noopener">fekhaba.com</a></p>
         </div>
         <div class="work-card" data-sector="health">
           <div class="wk-eyebrow">Education</div>
           <h4>Library MIS (NERI)</h4>
-          <p>Laravel library management system behind institutional sign-in: cataloguing, borrowing and returns, user-ID accounts with role permissions, and reporting. <a href="https://www.nerimis.rw" target="_blank" rel="noopener">nerimis.rw</a></p>
+          <p>Laravel library system: catalogue, borrowing and returns, user accounts with roles, and reports. <a href="https://www.nerimis.rw" target="_blank" rel="noopener">nerimis.rw</a></p>
         </div>
         <div class="work-card" data-sector="commerce">
-          <div class="wk-eyebrow">Publishing / commerce</div>
+          <div class="wk-eyebrow">Publishing</div>
           <h4>iBABA Books</h4>
-          <p>Digital bookstore and publishing platform — in-browser ebook reader, physical orders with delivery tracking, an author suite for uploads and earnings, catalogue search across genre and language, reader libraries, and an admin control centre. <a href="https://ibabacs.rw" target="_blank" rel="noopener">ibabacs.rw</a></p>
+          <p>Bookstore and publishing site — ebook reader, physical orders, author uploads and earnings, catalogue search, and admin tools. <a href="https://ibabacs.rw" target="_blank" rel="noopener">ibabacs.rw</a></p>
         </div>
         <div class="work-card" data-sector="media">
-          <div class="wk-eyebrow">Media / archive</div>
+          <div class="wk-eyebrow">Archive</div>
           <h4>MISARWA</h4>
-          <p>Sacred-music archive for the Catholic Church in Rwanda — 907 songs, 152 composers, and 10 editions, searchable by diocese and parish against the liturgical calendar, with PDF scores, texts, audio and video, and a Kinyarwanda/English/French interface. <a href="https://misarwa.rw" target="_blank" rel="noopener">misarwa.rw</a></p>
+          <p>Catholic sacred-music archive for Rwanda — 907 songs, 152 composers, searchable by diocese and parish, with scores, audio, and video. Interface in Kinyarwanda, English, and French. <a href="https://misarwa.rw" target="_blank" rel="noopener">misarwa.rw</a></p>
         </div>
         <div class="work-card" data-sector="media">
-          <div class="wk-eyebrow">Media / archive</div>
+          <div class="wk-eyebrow">Archive</div>
           <h4>HOZIANA</h4>
-          <p>Digital choir song archive with search, browsing, and a mobile-accessible interface. <a href="https://hoziana.com" target="_blank" rel="noopener">hoziana.com</a></p>
+          <p>Choir song archive — search, browse, works on phones. <a href="https://hoziana.com" target="_blank" rel="noopener">hoziana.com</a></p>
         </div>
         <div class="work-card" data-sector="commerce">
-          <div class="wk-eyebrow">Enterprise · Commerce ecosystem</div>
+          <div class="wk-eyebrow">Commerce</div>
           <h4>Nyereka Tech 2.0</h4>
-          <p>eCommerce platform with PIM, POS, CRM, inventory, proforma, payments, shipping, and AI. <a href="https://www.nyerekatech.com/en" target="_blank" rel="noopener">nyerekatech.com</a></p>
+          <p>Online shop with product catalogue, POS, CRM, stock, invoices, payments, and shipping. <a href="https://www.nyerekatech.com/en" target="_blank" rel="noopener">nyerekatech.com</a></p>
         </div>
         <div class="work-card" data-sector="commerce">
-          <div class="wk-eyebrow">Enterprise · Business system / POS</div>
+          <div class="wk-eyebrow">POS / business</div>
           <h4>JACKAL</h4>
-          <p>Business system covering POS, orders, payments, stock, and sales reports — deployed for bars, restaurants, motels, and hotels, with reservations, inventory, accounting, and purchasing. <a href="https://www.jackal.rw" target="_blank" rel="noopener">jackal.rw</a></p>
+          <p>POS, orders, payments, stock, and sales reports for bars, restaurants, motels, and hotels — also reservations, accounting, and purchasing. <a href="https://www.jackal.rw" target="_blank" rel="noopener">jackal.rw</a></p>
         </div>
         <div class="work-card" data-sector="hospitality">
-          <div class="wk-eyebrow">Enterprise · Travel marketplace</div>
+          <div class="wk-eyebrow">Travel</div>
           <h4>DaDi</h4>
-          <p>Multi-vendor travel marketplace — hotel bookings, transport, tours, flights, car rentals, and airport transfers, with Google Maps integration.</p>
+          <p>Travel marketplace for hotels, transport, tours, flights, car rentals, and airport transfers, with Google Maps.</p>
         </div>
         <div class="work-card" data-sector="commerce">
-          <div class="wk-eyebrow">Enterprise · Integrated hospitality MIS</div>
+          <div class="wk-eyebrow">Hospitality MIS</div>
           <h4>ERMIS</h4>
-          <p>One integrated management system across coffee shops, bars, restaurants, motels, and hotels — centralizing operations, workflows, document management, and executive reporting in a single platform.</p>
+          <p>One system for coffee shops, bars, restaurants, motels, and hotels — operations, documents, and reports in one place.</p>
         </div>
       </div>
     </div>
@@ -829,30 +850,30 @@
   <section id="more-systems">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Also deployed</div>
-        <h2>Further systems, sites, and engagements.</h2>
-        <p>Each on its own instance or contract — smaller in scope than the platforms above, held to the same standard.</p>
+        <div class="eyebrow">Also built</div>
+        <h2>More work.</h2>
+        <p>Other systems I built or installed — most are still running.</p>
       </div>
       <div class="about-body">
         <ul class="capability-list">
-          <li><div class="cap-tag">INDUSTRIAL</div><div><div class="cap-title">Industrial Management System</div><div class="cap-desc">Operations, records, processes, and reporting. <a href="http://94.72.112.148:50" target="_blank" rel="noopener">Live instance</a></div></div></li>
+          <li><div class="cap-tag">INDUSTRIAL</div><div><div class="cap-title">Industrial Management System</div><div class="cap-desc">Operations, records, and reports. <a href="http://94.72.112.148:50" target="_blank" rel="noopener">Live instance</a></div></div></li>
           <li><div class="cap-tag">COOP</div><div><div class="cap-title">HCRDWI System</div><div class="cap-desc">Huye Reservist Cooperative — members, records, activities. <a href="http://94.72.112.148:90" target="_blank" rel="noopener">Live instance</a></div></div></li>
-          <li><div class="cap-tag">COOP</div><div><div class="cap-title">HRIC System</div><div class="cap-desc">Member and HR information management — records, payroll, assets, projects, expenses, and income. <a href="http://94.72.112.148:91" target="_blank" rel="noopener">Live instance</a></div></div></li>
-          <li><div class="cap-tag">TRACKING</div><div><div class="cap-title">TransGuard System</div><div class="cap-desc">Activities, managers, maintenance, and operational records. <a href="http://94.72.112.148:92" target="_blank" rel="noopener">Live instance</a></div></div></li>
-          <li><div class="cap-tag">RETAIL</div><div><div class="cap-title">Quincaillerie System</div><div class="cap-desc">Products, inventory, sales, customers, payments, reporting. <a href="http://94.72.112.148:94" target="_blank" rel="noopener">Live instance</a></div></div></li>
-          <li><div class="cap-tag">RISK</div><div><div class="cap-title">Risk MIS</div><div class="cap-desc">Recording, assessing, monitoring, and reporting organizational risks. <a href="http://94.72.112.148:96" target="_blank" rel="noopener">Live instance</a></div></div></li>
-          <li><div class="cap-tag">FACILITIES</div><div><div class="cap-title">Parking Management System</div><div class="cap-desc">Vehicles, spaces, entries/exits, fees, payments, and reports. <a href="http://94.72.112.148:8020" target="_blank" rel="noopener">Live instance</a></div></div></li>
-          <li><div class="cap-tag">HOSPITALITY</div><div><div class="cap-title">Jackal Hospitality</div><div class="cap-desc">Hospitality management system for hotel and service operations.</div></div></li>
+          <li><div class="cap-tag">COOP</div><div><div class="cap-title">HRIC System</div><div class="cap-desc">Members, payroll, assets, projects, expenses, and income. <a href="http://94.72.112.148:91" target="_blank" rel="noopener">Live instance</a></div></div></li>
+          <li><div class="cap-tag">TRACKING</div><div><div class="cap-title">TransGuard System</div><div class="cap-desc">Activities, managers, maintenance, and ops records. <a href="http://94.72.112.148:92" target="_blank" rel="noopener">Live instance</a></div></div></li>
+          <li><div class="cap-tag">RETAIL</div><div><div class="cap-title">Quincaillerie System</div><div class="cap-desc">Products, stock, sales, customers, payments, reports. <a href="http://94.72.112.148:94" target="_blank" rel="noopener">Live instance</a></div></div></li>
+          <li><div class="cap-tag">RISK</div><div><div class="cap-title">Risk MIS</div><div class="cap-desc">Record, assess, and report organisational risks. <a href="http://94.72.112.148:96" target="_blank" rel="noopener">Live instance</a></div></div></li>
+          <li><div class="cap-tag">FACILITIES</div><div><div class="cap-title">Parking Management System</div><div class="cap-desc">Vehicles, parking spaces, entries/exits, fees, and reports. <a href="http://94.72.112.148:8020" target="_blank" rel="noopener">Live instance</a></div></div></li>
+          <li><div class="cap-tag">HOSPITALITY</div><div><div class="cap-title">Jackal Hospitality</div><div class="cap-desc">Hotel and service operations system.</div></div></li>
         </ul>
         <ul class="capability-list">
-          <li><div class="cap-tag">B2B</div><div><div class="cap-title">Industrial B2B</div><div class="cap-desc">Connects businesses for industrial products, purchasing, and B2B operations.</div></div></li>
-          <li><div class="cap-tag">M&amp;E</div><div><div class="cap-title">Food M&amp;E Dashboard</div><div class="cap-desc">Monitoring system for food programs — indicators, data, and analytics.</div></div></li>
-          <li><div class="cap-tag">CONTENT</div><div><div class="cap-title">Digital Bookstore</div><div class="cap-desc">Platform for selling and managing digital books and content.</div></div></li>
-          <li><div class="cap-tag">RW</div><div><div class="cap-title">Kinyarwanda property sale agreement</div><div class="cap-desc">A formal agreement composed as a compact, single-page DOCX.</div></div></li>
-          <li><div class="cap-tag">FAMILY</div><div><div class="cap-title">FamPeace</div><div class="cap-desc">Couples' and cycle-monitoring platform for family care and management — UI mockup through to a running instance. <a href="http://94.72.112.148:93" target="_blank" rel="noopener">Live instance</a></div></div></li>
-          <li><div class="cap-tag">IT</div><div><div class="cap-title">Centre d'Accueil Sainte Marie Karongi</div><div class="cap-desc">Installation of a security surveillance (CCTV) system for a retreat and accommodation centre in Karongi, Rwanda.</div></div></li>
-          <li><div class="cap-tag">WEB</div><div><div class="cap-title">Kigali Revision Center</div><div class="cap-desc">Full redesign with a gradient-heavy CSS design system for a Kigali tutoring centre. <a href="https://kigalirevisioncenter.com" target="_blank" rel="noopener">kigalirevisioncenter.com</a></div></div></li>
-          <li><div class="cap-tag">IT</div><div><div class="cap-title">Saint Mary Secondary School Kiruhura</div><div class="cap-desc">Installation of a security surveillance (CCTV) system for the school.</div></div></li>
+          <li><div class="cap-tag">B2B</div><div><div class="cap-title">Industrial B2B</div><div class="cap-desc">B2B site for industrial products and purchasing.</div></div></li>
+          <li><div class="cap-tag">M&amp;E</div><div><div class="cap-title">Food M&amp;E Dashboard</div><div class="cap-desc">Dashboard for food-program indicators and data.</div></div></li>
+          <li><div class="cap-tag">CONTENT</div><div><div class="cap-title">Digital Bookstore</div><div class="cap-desc">Sell and manage digital books.</div></div></li>
+          <li><div class="cap-tag">RW</div><div><div class="cap-title">Kinyarwanda property sale agreement</div><div class="cap-desc">A short property sale agreement in Kinyarwanda, as a one-page Word document.</div></div></li>
+          <li><div class="cap-tag">FAMILY</div><div><div class="cap-title">FamPeace</div><div class="cap-desc">Family-care app — from mockup to a running site. <a href="http://94.72.112.148:93" target="_blank" rel="noopener">Live instance</a></div></div></li>
+          <li><div class="cap-tag">IT</div><div><div class="cap-title">Centre d'Accueil Sainte Marie Karongi</div><div class="cap-desc">CCTV installation for a retreat centre in Karongi.</div></div></li>
+          <li><div class="cap-tag">WEB</div><div><div class="cap-title">Kigali Revision Center</div><div class="cap-desc">Website redesign for a tutoring centre in Kigali. <a href="https://kigalirevisioncenter.com" target="_blank" rel="noopener">kigalirevisioncenter.com</a></div></div></li>
+          <li><div class="cap-tag">IT</div><div><div class="cap-title">Saint Mary Secondary School Kiruhura</div><div class="cap-desc">CCTV installation for the school.</div></div></li>
         </ul>
       </div>
     </div>
@@ -863,29 +884,29 @@
   <section id="experience">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Track record</div>
-        <h2>Seven years, three roles, one trajectory.</h2>
+        <div class="eyebrow">Experience</div>
+        <h2>Where I've worked.</h2>
       </div>
       <ul class="timeline">
         <li>
           <div class="tl-date">Sep 2020 — Present</div>
           <div>
             <div class="tl-role">Full Stack Developer &amp; IT Support Specialist</div>
-            <div class="tl-org">Genius Software Ltd — Rwanda. Designs and deploys scalable web/mobile apps, builds RESTful APIs for mobile money and banking integrations, and manages LAN infrastructure, servers, backups, and CCTV/IP camera systems across client sites.</div>
+            <div class="tl-org">Genius Software Ltd — Rwanda. Web and mobile apps, REST APIs for mobile money and banking, plus LAN, servers, backups, and CCTV at client sites.</div>
           </div>
         </li>
         <li>
           <div class="tl-date">Sep 2018 — Aug 2020</div>
           <div>
             <div class="tl-role">Software Developer &amp; IT Support</div>
-            <div class="tl-org">IWAWE Technology Ltd — Rwanda. Built full-stack apps in Laravel, Flutter, and JavaScript; integrated payment gateways; supported network installation and CI/CD deployment workflows.</div>
+            <div class="tl-org">IWAWE Technology Ltd — Rwanda. Full-stack apps in Laravel, Flutter, and JavaScript; payment gateways; network install and CI/CD.</div>
           </div>
         </li>
         <li>
           <div class="tl-date">Aug 2015 — Oct 2017</div>
           <div>
             <div class="tl-role">Junior Software Developer &amp; IT Support</div>
-            <div class="tl-org">Easy One Ltd — Rwanda. SQL scripting, database validation, report generation, hardware maintenance, and LAN configuration under senior engineer guidance.</div>
+            <div class="tl-org">Easy One Ltd — Rwanda. SQL, database checks, reports, hardware support, and LAN setup, working under a senior engineer.</div>
           </div>
         </li>
       </ul>
@@ -931,8 +952,8 @@
   <section id="stack">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Toolset</div>
-        <h2>What it's built with.</h2>
+        <div class="eyebrow">Tools</div>
+        <h2>What I work with.</h2>
       </div>
       <div class="stack-cols">
         <div class="stack-col">
@@ -941,7 +962,7 @@
         </div>
         <div class="stack-col">
           <h5>Databases</h5>
-          <ul><li>MySQL · PostgreSQL</li><li>MongoDB</li><li>Query optimization &amp; indexing</li></ul>
+          <ul><li>MySQL · PostgreSQL</li><li>MongoDB</li><li>Query tuning</li></ul>
         </div>
         <div class="stack-col">
           <h5>DevOps &amp; APIs</h5>
@@ -949,7 +970,7 @@
         </div>
         <div class="stack-col">
           <h5>Infrastructure &amp; security</h5>
-          <ul><li>LAN / WAN / WLAN, VPNs</li><li>Server &amp; backup management</li><li>Cybersecurity fundamentals</li></ul>
+          <ul><li>LAN / WAN / WLAN, VPNs</li><li>Servers and backups</li><li>Basic security</li></ul>
         </div>
       </div>
     </div>
@@ -959,18 +980,33 @@
     <div class="wrap">
       <div class="footer-grid">
         <div>
-          <div class="eyebrow">Get in touch</div>
-          <h2>Building something that needs a technical lead, not just a developer?</h2>
+          <div class="eyebrow">Contact</div>
+          <h2>Got a project? Write to me.</h2>
           <div class="reaction-bar" id="reactionBar" aria-label="React to this portfolio">
-            <span class="reaction-label">React to this page</span>
-            <div class="reaction-buttons" id="reactionButtons">
-              <button type="button" class="reaction-btn" data-emoji="👍"><span class="e">👍</span><span class="n" data-emoji-count="👍">0</span></button>
-              <button type="button" class="reaction-btn" data-emoji="❤️"><span class="e">❤️</span><span class="n" data-emoji-count="❤️">0</span></button>
-              <button type="button" class="reaction-btn" data-emoji="🚀"><span class="e">🚀</span><span class="n" data-emoji-count="🚀">0</span></button>
-              <button type="button" class="reaction-btn" data-emoji="🔥"><span class="e">🔥</span><span class="n" data-emoji-count="🔥">0</span></button>
-              <button type="button" class="reaction-btn" data-emoji="💡"><span class="e">💡</span><span class="n" data-emoji-count="💡">0</span></button>
+            <span class="reaction-label">Quick reaction</span>
+                        <div class="reaction-buttons" id="reactionButtons">
+              <button type="button" class="reaction-btn" data-reaction="like" aria-label="Like" title="Like">
+                <i class="ri fa-solid fa-thumbs-up" aria-hidden="true"></i>
+                <span class="n" data-reaction-count="like">0</span>
+              </button>
+              <button type="button" class="reaction-btn" data-reaction="love" aria-label="Love" title="Love">
+                <i class="ri fa-solid fa-heart" aria-hidden="true"></i>
+                <span class="n" data-reaction-count="love">0</span>
+              </button>
+              <button type="button" class="reaction-btn" data-reaction="boost" aria-label="Boost" title="Boost">
+                <i class="ri fa-solid fa-rocket" aria-hidden="true"></i>
+                <span class="n" data-reaction-count="boost">0</span>
+              </button>
+              <button type="button" class="reaction-btn" data-reaction="fire" aria-label="Fire" title="Fire">
+                <i class="ri fa-solid fa-fire" aria-hidden="true"></i>
+                <span class="n" data-reaction-count="fire">0</span>
+              </button>
+              <button type="button" class="reaction-btn" data-reaction="idea" aria-label="Idea" title="Idea">
+                <i class="ri fa-solid fa-lightbulb" aria-hidden="true"></i>
+                <span class="n" data-reaction-count="idea">0</span>
+              </button>
             </div>
-          </div>
+</div>
         </div>
         <ul class="footer-links">
           <li><a href="mailto:bikorimanadavid.rw@gmail.com">Email — bikorimanadavid.rw@gmail.com</a></li>
@@ -978,7 +1014,7 @@
           <li><a href="https://github.com/DavidBIKORIMANA" target="_blank" rel="noopener">GitHub — DavidBIKORIMANA</a></li>
           <li><a href="https://www.linkedin.com/in/david-bikorimana-053529146/" target="_blank" rel="noopener">LinkedIn — david-bikorimana</a></li>
           <li><a href="https://www.facebook.com/bikorimana.david" target="_blank" rel="noopener">Facebook — bikorimana.david</a></li>
-          <li><a href="#top">Back to top ↑</a></li>
+          <li><a href="#top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a></li>
         </ul>
       </div>
 
@@ -1091,13 +1127,13 @@
     function renderCounts(counts, reacted){
       reacted = reacted || [];
       bar.querySelectorAll('.reaction-btn').forEach(function(btn){
-        var emoji = btn.getAttribute('data-emoji');
-        var n = btn.querySelector('[data-emoji-count]');
-        if(n && counts && Object.prototype.hasOwnProperty.call(counts, emoji)){
-          n.textContent = counts[emoji];
+        var key = btn.getAttribute('data-reaction');
+        var n = btn.querySelector('[data-reaction-count]');
+        if(n && counts && Object.prototype.hasOwnProperty.call(counts, key)){
+          n.textContent = counts[key];
         }
-        btn.classList.toggle('is-active', reacted.indexOf(emoji) !== -1);
-        btn.setAttribute('aria-pressed', reacted.indexOf(emoji) !== -1 ? 'true' : 'false');
+        btn.classList.toggle('is-active', reacted.indexOf(key) !== -1);
+        btn.setAttribute('aria-pressed', reacted.indexOf(key) !== -1 ? 'true' : 'false');
       });
     }
 
@@ -1109,23 +1145,23 @@
     bar.addEventListener('click', function(e){
       var btn = e.target.closest('.reaction-btn');
       if(!btn) return;
-      var emoji = btn.getAttribute('data-emoji');
+      var key = btn.getAttribute('data-reaction');
       btn.disabled = true;
       fetch('api/react.php', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ emoji: emoji, visitorId: visitorId })
+        body: JSON.stringify({ emoji: key, visitorId: visitorId })
       })
         .then(function(r){ return r.json(); })
         .then(function(data){
           if(data && data.counts){
             var reactedList = [];
             bar.querySelectorAll('.reaction-btn').forEach(function(b){
-              var bEmoji = b.getAttribute('data-emoji');
-              var isThis = bEmoji === emoji;
+              var bKey = b.getAttribute('data-reaction');
+              var isThis = bKey === key;
               var wasActive = b.classList.contains('is-active');
               var nowActive = isThis ? data.reacted : wasActive;
-              if(nowActive) reactedList.push(bEmoji);
+              if(nowActive) reactedList.push(bKey);
             });
             renderCounts(data.counts, reactedList);
           }
